@@ -12,4 +12,16 @@ function addCapitolLetter(str) {
     .map((word) => word[0].toUpperCase() + word.substring(1))
     .join(' ');
 }
-module.exports = { reverseSentence, addCapitolLetter };
+
+function oddOrEven(num) {
+  const theNumber = num
+    .toString()
+    .split('')
+    .map((number) => parseInt(number))
+    .reduce((acc, curr) => {
+      return acc + curr;
+    }, 0);
+  return theNumber % 2 === 0 ? 'Evenish' : 'Oddish';
+}
+
+module.exports = { reverseSentence, addCapitolLetter, oddOrEven };
