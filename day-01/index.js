@@ -28,4 +28,10 @@ function at(arr, index) {
   return index >= 0 ? arr[index] : arr[arr.length + index];
 }
 
-module.exports = { reverseSentence, addCapitolLetter, oddOrEven, at };
+function anagrams(wordOne, wordTwo) {
+  const a1 = wordOne.split('').sort().join();
+  const a2 = wordTwo.split('').sort().join();
+  return a1 === a2 ? true : false;
+}
+
+module.exports = { reverseSentence, addCapitolLetter, oddOrEven, at, anagrams };
