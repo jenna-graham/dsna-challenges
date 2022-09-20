@@ -61,6 +61,17 @@ function addPunctuation(string) {
   };
 }
 
+function rootDigit(n) {
+  const firstN = n
+    .toString()
+    .split('')
+    .map((number) => parseInt(number))
+    .reduce((acc, curr) => {
+      return acc + curr;
+    }, 0);
+  return firstN < 10 ? firstN : rootDigit(firstN);
+}
+
 module.exports = {
   reverseSentence,
   addCapitolLetter,
@@ -70,4 +81,5 @@ module.exports = {
   multiplesOfN,
   fizzBuzz,
   addPunctuation,
+  rootDigit,
 };
