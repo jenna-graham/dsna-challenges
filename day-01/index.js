@@ -1,4 +1,3 @@
-// eslint-disable
 function reverseSentence(str) {
   return str
     .split(' ')
@@ -6,8 +5,8 @@ function reverseSentence(str) {
     .join(' ');
 }
 
-function addCapitolLetter(str) {
-  return str
+function addCapitolLetter(string) {
+  return string
     .toLowerCase()
     .split(' ')
     .map((word) => word[0].toUpperCase() + word.substring(1))
@@ -45,15 +44,30 @@ function multiplesOfN(n) {
   return multiples;
 }
 
-function fizzBuzz(number) {
-  return number > 0
-    ? Array.from({ length: number }, (v, i) => i + 1).map((num) => {
-        if (num % 3 === 0 && num % 5 === 0) return 'FizzBuzz';
-        if (num % 3 === 0) return 'Fizz';
-        if (num % 5 === 0) return 'Buzz';
-        return num;
-      })
-    : [];
+// function fizzBuzz(number) {
+//   return number > 0
+//     ? Array.from({ length: number }, (v, i) => i + 1).map((num) => {
+//         if (num % 3 === 0 && num % 5 === 0) return 'FizzBuzz';
+//         if (num % 3 === 0) return 'Fizz';
+//         if (num % 5 === 0) return 'Buzz';
+//         return num;
+//       })
+//     : [];
+// }
+function fizzBuzz(num) {
+  const arr = [];
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      arr.push('FizzBuzz');
+    } else if (i % 5 === 0) {
+      arr.push('Buzz');
+    } else if (i % 3 === 0) {
+      arr.push('Fizz');
+    } else {
+      arr.push(i);
+    }
+  }
+  return arr;
 }
 
 function addPunctuation(string) {
@@ -62,8 +76,8 @@ function addPunctuation(string) {
   };
 }
 
-function rootDigit(n) {
-  const firstN = n
+function rootDigit(num) {
+  const firstN = num
     .toString()
     .split('')
     .map((number) => parseInt(number))
