@@ -1,3 +1,4 @@
+// eslint-disable
 function reverseSentence(str) {
   return str
     .split(' ')
