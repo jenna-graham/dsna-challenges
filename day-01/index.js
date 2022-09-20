@@ -55,6 +55,12 @@ function fizzBuzz(number) {
     : [];
 }
 
+function addPunctuation(string) {
+  return function addExcitement(str) {
+    return str + string;
+  };
+}
+
 module.exports = {
   reverseSentence,
   addCapitolLetter,
@@ -63,4 +69,5 @@ module.exports = {
   anagrams,
   multiplesOfN,
   fizzBuzz,
+  addPunctuation,
 };
