@@ -24,4 +24,8 @@ function oddOrEven(num) {
   return theNumber % 2 === 0 ? 'Evenish' : 'Oddish';
 }
 
-module.exports = { reverseSentence, addCapitolLetter, oddOrEven };
+function at(arr, index) {
+  return index >= 0 ? arr[index] : arr[arr.length + index];
+}
+
+module.exports = { reverseSentence, addCapitolLetter, oddOrEven, at };
