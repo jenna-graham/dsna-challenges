@@ -4,6 +4,7 @@ const {
   oddOrEven,
   at,
   anagrams,
+  multiplesOfN,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -43,6 +44,14 @@ describe('primitive code challenges', () => {
       const wordFour = 'dog';
       expect(anagrams(wordOne, wordTwo)).toEqual(true);
       expect(anagrams(wordThree, wordFour)).toBe(false);
+    });
+  });
+
+  describe('takes a positive integer `n`, and returns an array that contains, all of the numbers from 1 to 50 that are multiples of `n`.', () => {
+    it('should return an array that contains all the numbers from 1 to 50 that are multiples of n', () => {
+      expect(multiplesOfN(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+      expect(multiplesOfN(25)).toEqual([25, 50]);
+      expect(multiplesOfN(75)).toEqual([]);
     });
   });
 });

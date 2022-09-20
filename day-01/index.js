@@ -34,4 +34,21 @@ function anagrams(wordOne, wordTwo) {
   return a1 === a2 ? true : false;
 }
 
-module.exports = { reverseSentence, addCapitolLetter, oddOrEven, at, anagrams };
+function multiplesOfN(n) {
+  const multiples = [];
+  for (let i = 1; i <= 50; i++) {
+    if (n * i <= 50) {
+      multiples.push(n * i);
+    }
+  }
+  return multiples;
+}
+
+module.exports = {
+  reverseSentence,
+  addCapitolLetter,
+  oddOrEven,
+  at,
+  anagrams,
+  multiplesOfN,
+};
