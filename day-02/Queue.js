@@ -10,6 +10,10 @@ class Queue {
     dequeue() {
         return this.#list.shift();
     }
+    hasNext() {
+        return this.readableArr.length ? true : false;
+    }
+
 
     get count() {
         return this.#list.length;
