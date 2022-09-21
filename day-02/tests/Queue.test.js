@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const { Queue } = require('../Queue');
 
 describe('Queue Tests', () => {
