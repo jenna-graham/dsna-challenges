@@ -1,3 +1,4 @@
+// disable-eslint
 class Stack {
     #list = [];
 
@@ -10,7 +11,7 @@ class Stack {
     }
 
     classPop() {
-        this.#list.pop()
+        this.#list.pop();
     }
 
     classPeek() {
