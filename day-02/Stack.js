@@ -1,4 +1,4 @@
-// disable-eslint
+// eslint-disable
 class Stack {
     #list = [];
 
@@ -15,7 +15,7 @@ class Stack {
     }
 
     classPeek() {
-       return this.#list[this.#list.length -1];
+    return this.#list[this.#list.length -1];
     }
 
     get readableArr() {
