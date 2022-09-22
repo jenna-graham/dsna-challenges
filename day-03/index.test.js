@@ -11,7 +11,7 @@ describe('node based data structures', () => {
     B.add(C)
     console.log('A', A);
     expect(B.value).toEqual('B');
-    expect(B.left.value).toEqual('C');
+    expect(B.left.value).toEqual('A');
   })
 
 });

@@ -7,13 +7,13 @@ class BinaryTreeNode {
     add(node) {
         if(node.value === this.value) {
             this.value = node.value;
-        } else if (node.value <= this.value) {
+        } else if (node.value >= this.value) {
             if (this.right === null) {
                 this.right = node;
             } else {
                 this.right.add(node);
             }
-        }else if (node.value > this.value) {
+        }else if (node.value < this.value) {
             if(this.left === null) {
                 this.left = node;
             } else {
